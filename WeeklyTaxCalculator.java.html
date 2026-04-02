@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>WeeklyTaxCalculator.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+WeeklyTaxCalculator.java</font>
+</center></td></tr></table>
+<pre>
+<span class="s1">import </span><span class="s0">java</span><span class="s2">.</span><span class="s0">util</span><span class="s2">.</span><span class="s0">Scanner</span><span class="s2">;</span>
+<span class="s1">public class </span><span class="s0">WeeklyTaxCalculator</span><span class="s2">{</span>
+    <span class="s1">public static void </span><span class="s0">main</span><span class="s2">( </span><span class="s0">String</span><span class="s2">[]</span><span class="s0">args</span><span class="s2">) {</span>
+        <span class="s0">Scanner input </span><span class="s2">= </span><span class="s1">new </span><span class="s0">Scanner</span><span class="s2">(</span><span class="s0">System</span><span class="s2">.</span><span class="s0">in</span><span class="s2">);</span>
+        <span class="s1">double </span><span class="s0">weeklyIncome</span><span class="s2">;</span>
+        <span class="s1">double </span><span class="s0">taxRate</span><span class="s2">;</span>
+        <span class="s1">double </span><span class="s0">taxWithholding</span><span class="s2">;</span>
+
+        <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;Welcome! Please Enter Your Weekly Income: &quot;</span><span class="s2">);</span>
+        <span class="s0">weeklyIncome </span><span class="s2">= </span><span class="s0">input</span><span class="s2">.</span><span class="s0">nextDouble</span><span class="s2">();</span>
+
+        <span class="s1">if </span><span class="s2">(</span><span class="s0">weeklyIncome </span><span class="s2">&lt; </span><span class="s4">500</span><span class="s2">) {</span>
+            <span class="s0">taxRate </span><span class="s2">= </span><span class="s4">0.10</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s1">else if </span><span class="s2">(</span><span class="s0">weeklyIncome </span><span class="s2">&gt;= </span><span class="s4">500 </span><span class="s2">&amp;&amp; </span><span class="s0">weeklyIncome </span><span class="s2">&lt; </span><span class="s4">1500</span><span class="s2">) {</span>
+            <span class="s0">taxRate </span><span class="s2">= </span><span class="s4">0.15</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s1">else if </span><span class="s2">(</span><span class="s0">weeklyIncome </span><span class="s2">&gt;= </span><span class="s4">1500 </span><span class="s2">&amp;&amp; </span><span class="s0">weeklyIncome </span><span class="s2">&lt;</span><span class="s4">2500</span><span class="s2">) {</span>
+            <span class="s0">taxRate </span><span class="s2">= </span><span class="s4">0.20</span><span class="s2">;</span>
+        <span class="s2">} </span><span class="s1">else</span><span class="s2">{</span>
+                <span class="s0">taxRate </span><span class="s2">= </span><span class="s4">0.30</span><span class="s2">;</span>
+
+            <span class="s2">}</span>
+            <span class="s0">taxWithholding </span><span class="s2">= </span><span class="s0">weeklyIncome </span><span class="s2">* </span><span class="s0">taxRate</span><span class="s2">;</span>
+            <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;Weekly income: $&quot; </span><span class="s2">+ </span><span class="s0">weeklyIncome</span><span class="s2">);</span>
+            <span class="s0">System</span><span class="s2">.</span><span class="s0">out</span><span class="s2">.</span><span class="s0">println</span><span class="s2">(</span><span class="s3">&quot;Tax withholding: $&quot; </span><span class="s2">+ </span><span class="s0">taxWithholding</span><span class="s2">);</span>
+
+            <span class="s0">input</span><span class="s2">.</span><span class="s0">close</span><span class="s2">();</span>
+        <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
